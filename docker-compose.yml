@@ -19,7 +19,8 @@ services:
     image: postgres
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=example
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=budaburger
     container_name: bq-api-node_db
     ports:
       - "5432:5432"
