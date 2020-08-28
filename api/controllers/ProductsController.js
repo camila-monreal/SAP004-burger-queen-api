@@ -16,6 +16,12 @@ class ProductsController {
         const product = await ProductsService.add(req.body)
         return res.json(product);
     }
+
+    static async delete(req, res) {
+        const product_id = req.params.id
+        const product = await ProductsService.remove(product_id)
+        return res.json(product);
+    }
 }
 
 module.exports = ProductsController;

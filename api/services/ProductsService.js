@@ -23,6 +23,13 @@ class ProductsService {
             throw error
         }
     }
+    static async remove(productId) {
+        try {
+            return(await Product.findByPk(productId)).destroy()
+        } catch (error) {
+            throw error
+        }
+    }
 }
 
 module.exports = ProductsService;
